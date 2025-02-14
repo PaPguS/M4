@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    img {
+      width: 100px;
+      position: absolute;
+      transition: all 0.5s;
+    }
+  </style>
+  <body>
+    <img src="olubka.jpg" id="golubka" />
+  </body>
+  <script>
+    let golubka = document.getElementById("golubka");
+    function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function RunGolubka(){
+        let x = getRndInteger(1, 50);
+        let y = getRndInteger(1, 50);
+        golubka.style.top = `${y}%`
+        golubka.style.left = `${x}%`
+    }
+    setInterval(RunGolubka, 1000)
+  </script>
+</html>
