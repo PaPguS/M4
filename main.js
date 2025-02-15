@@ -60,14 +60,3 @@ function stopQuiz() {
     current = 0
     correct = 0
 }
-
-
-
-
-
-
-
-
-
-
-
